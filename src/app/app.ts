@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { QrCodeComponent } from './qr-code/qr-code';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [FormsModule, QrCodeComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected title = 'qr-code-demo';
+export class AppComponent {
+  qrValue: string = 'https://yourapppppppppppppppppppp.com';
 }
